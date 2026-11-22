@@ -12,6 +12,7 @@
         <section class="min-vh-100">
             <?php
             // Logika PHP Switch Statement
+            $content = "home.php"; // Halaman default
             $mod = "";
             
             if(isset($_GET['page'])) {
@@ -25,7 +26,10 @@
                 case "kelas": $content="kelas.php"; break;
                 case "kuis": $content="kuis.php"; break;
                 case "credit": $content="credit.php"; break; // Halaman Wajib Tugas
+                default: $content="home.php";
             }
+            // Memanggil file halaman sesuai hasil switch
+            include($content);
             ?>
         </section>
 
