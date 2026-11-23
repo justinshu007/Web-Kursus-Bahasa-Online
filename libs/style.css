@@ -1,0 +1,114 @@
+/* Definisi Variabel Palet Warna */
+:root {
+    --toska-utama: #0d9488;      /* Hijau Toska Utama */
+    --toska-gelap: #0f766e;      /* Hijau Toska Hover */
+    --toska-lembut: #ccfbf1;     /* Latar Badge / Sorotan Lembut */
+    --biru-tua: #0f172a;         /* Biru Tua untuk Teks Judul & Kontras */
+    --aksen-kuning: #f59e0b;     /* Kuning/Oranye untuk Tombol Aksi & Sorotan */
+    --aksen-oranye: #d97706;     /* Hover Kuning/Oranye */
+    --latar-halaman: #f8fafc;    /* Latar Belakang Halaman Bersih */
+}
+
+/* Penerapan Font Global (Outfit + Noto Sans JP untuk Huruf Jepang) */
+body {
+    font-family: 'Outfit', 'Noto Sans JP', sans-serif;
+    background-color: var(--latar-halaman);
+    color: var(--biru-tua);
+}
+
+h1, h2, h3, h4, h5, h6, .navbar-brand {
+    color: var(--biru-tua);
+    letter-spacing: -0.01em;
+}
+
+/* Penyesuaian Warna Utama (Hijau Toska) */
+.bg-primary {
+    background-color: var(--toska-utama) !important;
+}
+
+.text-primary {
+    color: var(--toska-utama) !important;
+}
+
+.border-primary {
+    border-color: var(--toska-utama) !important;
+}
+
+.btn-primary {
+    background-color: var(--toska-utama);
+    border-color: var(--toska-utama);
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+    background-color: var(--toska-gelap);
+    border-color: var(--toska-gelap);
+}
+
+.btn-outline-primary {
+    color: var(--toska-utama);
+    border-color: var(--toska-utama);
+    font-weight: 500;
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--toska-utama);
+    border-color: var(--toska-utama);
+    color: #ffffff;
+}
+
+/* Penyesuaian Aksen Pelengkap (Kuning / Oranye) */
+.btn-warning, .btn-aksen {
+    background-color: var(--aksen-kuning);
+    border-color: var(--aksen-kuning);
+    color: var(--biru-tua);
+    font-weight: 600;
+}
+
+.btn-warning:hover, .btn-aksen:hover {
+    background-color: var(--aksen-oranye);
+    border-color: var(--aksen-oranye);
+    color: #ffffff;
+}
+
+/* Navigasi & Item Aktif */
+.navbar {
+    background-color: #ffffff !important;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.navbar-brand strong {
+    color: var(--toska-utama);
+    font-size: 1.4rem;
+}
+
+.nav-link:hover {
+    color: var(--toska-utama) !important;
+}
+
+.list-group-item.active {
+    background-color: var(--toska-utama) !important;
+    border-color: var(--toska-utama) !important;
+}
+
+/* Efek Kartu & Sudut Membulat Modern */
+.card {
+    border-radius: 14px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.course-item .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(15, 23, 42, 0.08) !important;
+}
+
+.progress-bar {
+    background-color: var(--toska-utama);
+}
+
+/* Footer dengan Nuansa Biru Tua */
+footer {
+    background-color: var(--biru-tua) !important;
+    color: #f8fafc !important;
+}
