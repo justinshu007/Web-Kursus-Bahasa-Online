@@ -1,7 +1,7 @@
 <div class="container my-5">
     <div class="row justify-content-center">
         <div class="col-lg-8">
-            <!-- Header Quiz -->
+            <!-- bagian judul kuis -->
             <div class="card border-0 shadow-sm mb-3 bg-primary text-white">
                 <div class="card-body d-flex justify-content-between align-items-center py-3">
                     <div>
@@ -12,7 +12,7 @@
                 </div>
             </div>
 
-            <!-- Penanda Nomor Soal Aktif -->
+            <!-- penanda nomor soal aktif -->
             <div class="card border-0 shadow-sm mb-3">
                 <div class="card-body py-2 px-4 d-flex justify-content-between align-items-center bg-light">
                     <span id="nomorSoalBadge" class="fw-bold text-primary">Soal 1 dari 9</span>
@@ -20,19 +20,19 @@
                 </div>
             </div>
 
-            <!-- Area Pertanyaan & Pilihan Jawaban -->
+            <!-- area pertanyaan dan pilihan jawaban -->
             <div class="card border-0 shadow-sm mb-4" id="areaSoal">
                 <div class="card-body p-4">
                     <h5 id="teksPertanyaan" class="fw-bold mb-4 lh-base">
                         Partikel manakah yang digunakan untuk menandai objek langsung dari suatu kata kerja dalam bahasa Jepang?
                     </h5>
 
-                    <!-- Pilihan Ganda (Opsi A - D) -->
+                    <!-- tempat pilihan jawaban ganda -->
                     <div class="d-grid gap-3" id="containerOpsi">
-                        <!-- Diisi secara dinamis melalui JavaScript -->
+                        <!-- diisi otomatis lewat javascript -->
                     </div>
 
-                    <!-- Tombol Navigasi Sebelumnya / Selanjutnya -->
+                    <!-- tombol pindah soal sebelumnya dan selanjutnya -->
                     <div class="d-flex justify-content-between mt-4 pt-3 border-top">
                         <button type="button" id="btnPrev" class="btn btn-outline-secondary" onclick="gantiSoal(soalAktif - 1)" disabled>
                             &larr; Sebelumnya
@@ -47,7 +47,7 @@
                 </div>
             </div>
 
-            <!-- Area Hasil Nilai (Muncul setelah tombol Selesai diklik) -->
+            <!-- area tampilan nilai akhir -->
             <div class="card border-0 shadow-sm mb-4 d-none text-center p-4" id="areaHasil">
                 <h4 class="fw-bold mb-2">Evaluasi Selesai!</h4>
                 <p class="text-muted">Berikut adalah skor hasil pengerjaan kuis Anda:</p>
@@ -59,12 +59,12 @@
                 </div>
             </div>
 
-            <!-- Navigasi Nomor Soal (1 - 9) -->
+            <!-- kotak navigasi nomor soal -->
             <div class="card border-0 shadow-sm">
                 <div class="card-body p-3">
                     <small class="text-muted d-block mb-2 fw-semibold">Navigasi Nomor Soal:</small>
                     <div class="d-flex flex-wrap gap-2" id="navigasiNomor">
-                        <!-- Tombol nomor 1-9 dibuat otomatis oleh JavaScript -->
+                        <!-- tombol nomor dibuat otomatis oleh javascript -->
                     </div>
                 </div>
             </div>
@@ -72,7 +72,7 @@
     </div>
 </div>
 
-<!-- Script Logika Kuis Interaktif -->
+<!-- kode javascript untuk menjalankan kuis -->
 <script>
 const daftarSoal = [
     {
@@ -179,7 +179,7 @@ function tampilkanSoal() {
         containerOpsi.appendChild(label);
     });
 
-    // Atur visibilitas tombol Sebelumnya, Selanjutnya, dan Selesai
+    // mengatur tampilan tombol sebelumnya, selanjutnya, dan selesai
     document.getElementById('btnPrev').disabled = (soalAktif === 0);
     
     if (soalAktif === daftarSoal.length - 1) {
@@ -228,6 +228,6 @@ function ulangiKuis() {
     tampilkanSoal();
 }
 
-// Inisialisasi kuis saat halaman dimuat
+// memulai tampilan kuis saat halaman pertama dibuka
 tampilkanSoal();
 </script>

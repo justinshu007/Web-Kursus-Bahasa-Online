@@ -1,22 +1,26 @@
 <div class="container my-5">
-    <!-- Navigasi Atas Ringkas -->
+    <!-- navigasi atas menuju dashboard -->
     <div class="d-flex justify-content-between align-items-center mb-3">
         <a href="index.php?page=dashboard" class="text-decoration-none text-secondary">&larr; Kembali ke Dashboard</a>
         <span class="badge bg-primary px-3 py-2">Sedang Belajar: Bahasa Jepang (JLPT N5)</span>
     </div>
 
     <div class="row g-4">
-        <!-- Kolom Kiri: Layar Materi Utama -->
+        <!-- kolom kiri untuk pemutar video youtube -->
         <div class="col-lg-8">
-            <div class="card border-0 shadow-sm overflow-hidden">
-                <!-- Area Layar Video / Pratinjau Modul -->
-                <div class="bg-dark text-white d-flex flex-column align-items-center justify-content-center p-4 text-center" style="height: 400px;">
-                    <span class="badge bg-primary mb-2">Video Pembelajaran</span>
-                    <h4 id="videoOverlayTitle" class="fw-semibold mb-2">2.1 Grammar: Partikel Dasar (Wa, Ga, Wo)</h4>
-                    <small class="text-muted">Area pemutaran video materi kursus</small>
+            <div class="card border-0 shadow-sm">
+                <!-- area layar video youtube -->
+                <div class="ratio ratio-16x9 bg-dark rounded-top">
+                    <iframe id="youtubePlayer" 
+                            src="https://www.youtube.com/embed/6p9Il_j0zjc" 
+                            title="Video Pembelajaran Bahasa Jepang" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen>
+                    </iframe>
                 </div>
 
-                <!-- Deskripsi Materi di Bawah Layar -->
+                <!-- keterangan materi di bawah video -->
                 <div class="card-body p-4">
                     <div class="d-flex justify-content-between align-items-start mb-2">
                         <h4 id="lessonTitle" class="fw-bold mb-0">2.1 Grammar: Partikel Dasar (Wa, Ga, Wo)</h4>
@@ -33,15 +37,15 @@
             </div>
         </div>
 
-        <!-- Kolom Kanan: Daftar Materi (Playlist) -->
+        <!-- kolom kanan untuk daftar pilihan materi -->
         <div class="col-lg-4">
             <div class="card border-0 shadow-sm p-3">
                 <h5 class="fw-bold border-bottom pb-3 mb-3">Daftar Materi</h5>
                 
                 <div class="list-group" id="playlist">
-                    <!-- Materi 2.1 -->
+                    <!-- materi pertama -->
                     <button type="button" class="list-group-item list-group-item-action active d-flex justify-content-between align-items-center py-3"
-                            onclick="pilihMateri(this, '2.1 Grammar: Partikel Dasar (Wa, Ga, Wo)', 'Durasi: 12:45', 'Pada sesi ini, kita akan mempelajari fungsi partikel penanda topik (は / wa), subjek (が / ga), dan objek (を / wo) dalam struktur kalimat bahasa Jepang sehari-hari.')">
+                            onclick="pilihMateri(this, '6p9Il_j0zjc', '2.1 Grammar: Partikel Dasar (Wa, Ga, Wo)', 'Durasi: 12:45', 'Pada sesi ini, kita akan mempelajari fungsi partikel penanda topik (は / wa), subjek (が / ga), dan objek (を / wo) dalam struktur kalimat bahasa Jepang sehari-hari.')">
                         <div>
                             <div class="fw-bold">2.1 Grammar</div>
                             <small>Partikel Dasar (Wa, Ga, Wo)</small>
@@ -49,9 +53,9 @@
                         <span class="badge bg-light text-dark">Diputar</span>
                     </button>
 
-                    <!-- Materi 2.2 -->
+                    <!-- materi kedua -->
                     <button type="button" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center py-3"
-                            onclick="pilihMateri(this, '2.2 Kosakata Sehari-hari (Kotoba)', 'Durasi: 10:20', 'Memperkaya perbendaharaan kata benda di lingkungan sekolah, kantor, dan aktivitas harian beserta pelafalannya.')">
+                            onclick="pilihMateri(this, '6p9Il_j0zjc', '2.2 Kosakata Sehari-hari (Kotoba)', 'Durasi: 10:20', 'Memperkaya perbendaharaan kata benda di lingkungan sekolah, kantor, dan aktivitas harian beserta pelafalannya.')">
                         <div>
                             <div class="fw-bold">2.2 Kosakata</div>
                             <small>Aktivitas & Benda Sekitar</small>
@@ -59,9 +63,9 @@
                         <span class="badge bg-secondary">10:20</span>
                     </button>
 
-                    <!-- Materi 2.3 -->
+                    <!-- materi ketiga -->
                     <button type="button" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center py-3"
-                            onclick="pilihMateri(this, '2.3 Percakapan (Kaiwa)', 'Durasi: 15:10', 'Simulasi dialog perkenalan diri dan menanyakan arah dengan intonasi alami penutur asli Jepang.')">
+                            onclick="pilihMateri(this, '6p9Il_j0zjc', '2.3 Percakapan (Kaiwa)', 'Durasi: 15:10', 'Simulasi dialog perkenalan diri dan menanyakan arah dengan intonasi alami penutur asli Jepang.')">
                         <div>
                             <div class="fw-bold">2.3 Percakapan</div>
                             <small>Dialog & Intonasi Alami</small>
@@ -69,9 +73,9 @@
                         <span class="badge bg-secondary">15:10</span>
                     </button>
 
-                    <!-- Materi 2.4 -->
+                    <!-- materi keempat -->
                     <button type="button" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center py-3"
-                            onclick="pilihMateri(this, '2.4 Latihan Membaca (Dokkai)', 'Durasi: 08:50', 'Membaca paragraf pendek menggunakan huruf Hiragana dan Katakana tanpa bantuan Romaji.')">
+                            onclick="pilihMateri(this, '6p9Il_j0zjc', '2.4 Latihan Membaca (Dokkai)', 'Durasi: 08:50', 'Membaca paragraf pendek menggunakan huruf Hiragana dan Katakana tanpa bantuan Romaji.')">
                         <div>
                             <div class="fw-bold">2.4 Latihan Membaca</div>
                             <small>Teks Pendek Hiragana</small>
@@ -80,7 +84,7 @@
                     </button>
                 </div>
 
-                <!-- Tautan Cepat ke Evaluasi Kuis -->
+                <!-- tombol menuju halaman kuis -->
                 <div class="mt-4 pt-2 border-top">
                     <a href="index.php?page=kuis" class="btn btn-outline-primary w-100 fw-semibold">
                         Buka Halaman Kuis Modul 2
@@ -91,10 +95,10 @@
     </div>
 </div>
 
-<!-- Script Perpindahan Daftar Materi -->
+<!-- kode javascript untuk mengganti video dan materi yang dipilih -->
 <script>
-function pilihMateri(element, judul, durasi, deskripsi) {
-    // Hapus status aktif pada semua item daftar materi
+function pilihMateri(element, videoId, judul, durasi, deskripsi) {
+    // menghapus tanda aktif pada semua daftar materi
     const items = document.querySelectorAll('#playlist .list-group-item');
     items.forEach(item => {
         item.classList.remove('active');
@@ -106,15 +110,15 @@ function pilihMateri(element, judul, durasi, deskripsi) {
         }
     });
 
-    // Tandai materi yang dipilih sebagai aktif
+    // memberikan tanda aktif pada materi yang diklik
     element.classList.add('active');
     const activeBadge = element.querySelector('.badge');
     activeBadge.classList.replace('bg-secondary', 'bg-light');
     activeBadge.classList.add('text-dark');
     activeBadge.innerText = 'Diputar';
 
-    // Perbarui judul, durasi, dan deskripsi pada area layar utama
-    document.getElementById('videoOverlayTitle').innerText = judul;
+    // mengubah video youtube, judul, durasi, dan deskripsi
+    document.getElementById('youtubePlayer').src = 'https://www.youtube.com/embed/' + videoId;
     document.getElementById('lessonTitle').innerText = judul;
     document.getElementById('lessonDuration').innerText = durasi;
     document.getElementById('lessonDesc').innerText = deskripsi;

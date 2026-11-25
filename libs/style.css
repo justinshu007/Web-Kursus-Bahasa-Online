@@ -2,17 +2,17 @@
 :root {
     --toska-utama: #0d9488;      /* Hijau Toska Utama */
     --toska-gelap: #0f766e;      /* Hijau Toska Hover */
-    --toska-lembut: #ccfbf1;     /* Latar Badge / Sorotan Lembut */
+    --toska-lembut: #ccfbf1;     /* Latar Badge */
     --biru-tua: #0f172a;         /* Biru Tua untuk Teks Judul & Kontras */
     --aksen-kuning: #f59e0b;     /* Kuning/Oranye untuk Tombol Aksi & Sorotan */
     --aksen-oranye: #d97706;     /* Hover Kuning/Oranye */
-    --latar-halaman: #f8fafc;    /* Latar Belakang Halaman Bersih */
+    --putih: #f8fafc;    /* Latar Belakang Halaman Bersih */
 }
 
-/* Penerapan Font Global (Outfit + Noto Sans JP untuk Huruf Jepang) */
+/* Penerapan Font Global */
 body {
     font-family: 'Outfit', 'Noto Sans JP', sans-serif;
-    background-color: var(--latar-halaman);
+    background-color: var(--putih);
     color: var(--biru-tua);
 }
 
@@ -58,7 +58,7 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
     color: #ffffff;
 }
 
-/* Penyesuaian Aksen Pelengkap (Kuning / Oranye) */
+/* Penyesuaian Aksen Pelengkap */
 .btn-warning, .btn-aksen {
     background-color: var(--aksen-kuning);
     border-color: var(--aksen-kuning);
@@ -92,7 +92,7 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
     border-color: var(--toska-utama) !important;
 }
 
-/* Efek Kartu & Sudut Membulat Modern */
+/* Efek Kartu & Sudut Bulat */
 .card {
     border-radius: 14px;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -107,7 +107,7 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
     background-color: var(--toska-utama);
 }
 
-/* Footer dengan Nuansa Biru Tua */
+/* Footer Biru Tua */
 footer {
     background-color: var(--biru-tua) !important;
     color: #f8fafc !important;

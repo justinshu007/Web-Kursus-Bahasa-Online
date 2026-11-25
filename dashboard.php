@@ -1,6 +1,6 @@
 <div class="container my-5">
     <div class="row g-4">
-        <!-- Sidebar Navigasi Murid -->
+        <!-- menu samping untuk navigasi murid -->
         <div class="col-lg-3">
             <div class="card border-0 shadow-sm p-3">
                 <div class="text-center border-bottom pb-3 mb-3">
@@ -31,11 +31,11 @@
             </div>
         </div>
 
-        <!-- Kartu Ringkasan & Kemajuan Belajar -->
+        <!-- area utama ringkasan dan kemajuan belajar -->
         <div class="col-lg-9">
             <h3 class="fw-bold mb-4">Dashboard Belajar</h3>
 
-            <!-- Baris Atas: 3 Kartu Statistik Ringkasan -->
+            <!-- bagian atas berisi tiga kartu statistik -->
             <div class="row g-3 mb-4">
                 <div class="col-md-4">
                     <div class="card border-0 shadow-sm p-3 text-center h-100">
@@ -60,11 +60,11 @@
                 </div>
             </div>
 
-            <!-- Baris Bawah: Kemajuan Belajar (Progress Bars) -->
+            <!-- bagian bawah berisi daftar kemajuan belajar -->
             <div class="card border-0 shadow-sm p-4">
                 <h5 class="fw-bold mb-4">Kemajuan Belajar</h5>
 
-                <!-- Kursus 1: Bahasa Jepang -->
+                <!-- daftar kursus pertama bahasa jepang -->
                 <div class="border rounded p-3 mb-3">
                     <div class="d-flex justify-content-between align-items-center mb-2">
                         <div>
@@ -77,14 +77,14 @@
                         <div class="progress-bar bg-primary" role="progressbar" style="width: 67%;" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                     <div class="d-flex gap-2">
-                        <!-- Tombol menuju Layout 5 (Ruang Kelas) -->
+                        <!-- tombol menuju halaman ruang kelas -->
                         <a href="index.php?page=kelas" class="btn btn-sm btn-primary">Lanjut Belajar (Video)</a>
-                        <!-- Tombol menuju Layout 6 (Halaman Kuis) -->
+                        <!-- tombol menuju halaman kuis -->
                         <a href="index.php?page=kuis" class="btn btn-sm btn-outline-success">Kerjakan Kuis</a>
                     </div>
                 </div>
 
-                <!-- Kursus 2: Bahasa Inggris -->
+                <!-- daftar kursus kedua bahasa inggris -->
                 <div class="border rounded p-3">
                     <div class="d-flex justify-content-between align-items-center mb-2">
                         <div>

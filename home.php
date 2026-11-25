@@ -1,7 +1,7 @@
 <div class="container my-5">
-    <!-- Hero Section: Dua Kolom Utama -->
+    <!-- bagian pembuka utama -->
     <div class="row align-items-center g-5 py-4">
-        <!-- Kolom Kiri: Headline, Deskripsi, dan Tombol Aksi -->
+        <!-- kolom kiri untuk judul dan tombol -->
         <div class="col-lg-6">
             <span class="badge rounded-pill px-3 py-2 mb-3" style="background-color: var(--toska-lembut); color: var(--toska-gelap); font-weight: 600;">
                 Platform Belajar Bahasa Interaktif
@@ -22,10 +22,10 @@
             </div>
         </div>
 
-        <!-- Kolom Kanan: Media Foto / Banner Utama -->
+        <!-- kolom kanan untuk gambar utama -->
         <div class="col-lg-6">
             <div class="card border-0 shadow-sm overflow-hidden">
-                <img src="images/hero_banner.jpg" 
+                <img src="images/boy_studying.jpg" 
                      alt="Suasana Belajar Bahasa Online di Just Bahasa" 
                      class="img-fluid w-100" 
                      style="height: 360px; object-fit: cover;">
@@ -35,14 +35,14 @@
 
     <hr class="my-5 opacity-25">
 
-    <!-- Bagian Keunggulan / Fitur Utama (3 Kolom) -->
+    <!-- bagian keunggulan kursus -->
     <div class="text-center mb-4">
         <h3 class="fw-bold">Mengapa Belajar di Just Bahasa?</h3>
         <p class="text-muted">Metode pembelajaran fleksibel yang dirancang untuk kebutuhan akademik maupun karier.</p>
     </div>
 
     <div class="row g-4">
-        <!-- Fitur 1 -->
+        <!-- keunggulan pertama -->
         <div class="col-md-4">
             <div class="card border-0 shadow-sm h-100 p-4">
                 <div class="mb-3">
@@ -55,7 +55,7 @@
             </div>
         </div>
 
-        <!-- Fitur 2 -->
+        <!-- keunggulan kedua -->
         <div class="col-md-4">
             <div class="card border-0 shadow-sm h-100 p-4">
                 <div class="mb-3">
@@ -68,7 +68,7 @@
             </div>
         </div>
 
-        <!-- Fitur 3 -->
+        <!-- keunggulan ketiga -->
         <div class="col-md-4">
             <div class="card border-0 shadow-sm h-100 p-4">
                 <div class="mb-3">

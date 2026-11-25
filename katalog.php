@@ -1,5 +1,5 @@
 <?php
-// Simulasi data kursus menggunakan Array PHP
+// data daftar kursus dalam bentuk array
 $daftar_kursus = [
     [
         "id" => 1,
@@ -53,7 +53,7 @@ $daftar_kursus = [
 ?>
 
 <div class="container my-5">
-    <!-- Bagian Atas: Search Bar -->
+    <!-- bagian kotak pencarian kursus -->
     <div class="row mb-4">
         <div class="col-12">
             <div class="input-group input-group-lg shadow-sm">
@@ -64,12 +64,12 @@ $daftar_kursus = [
     </div>
 
     <div class="row">
-        <!-- Bagian Kiri: Sidebar Filter -->
+        <!-- kolom kiri untuk pilihan filter -->
         <div class="col-lg-3 mb-4">
             <div class="card border-0 shadow-sm p-3">
                 <h5 class="fw-bold mb-3">Filter</h5>
                 
-                <!-- Filter Bahasa -->
+                <!-- filter berdasarkan bahasa -->
                 <div class="mb-4">
                     <h6 class="fw-semibold text-muted mb-2">Bahasa</h6>
                     <div class="form-check">
@@ -86,7 +86,7 @@ $daftar_kursus = [
                     </div>
                 </div>
 
-                <!-- Filter Level -->
+                <!-- filter berdasarkan tingkat kesulitan -->
                 <div class="mb-3">
                     <h6 class="fw-semibold text-muted mb-2">Level</h6>
                     <div class="form-check">
@@ -107,7 +107,7 @@ $daftar_kursus = [
             </div>
         </div>
 
-        <!-- Bagian Kanan: Grid Kursus 3 Kolom -->
+        <!-- kolom kanan untuk daftar kartu kursus -->
         <div class="col-lg-9">
             <div class="row g-4" id="courseGrid">
                 <?php foreach ($daftar_kursus as $kursus): ?>
@@ -117,7 +117,7 @@ $daftar_kursus = [
                      data-judul="<?php echo strtolower($kursus['judul']); ?>">
                     
                     <div class="card h-100 border-0 shadow-sm">
-                        <!-- Placeholder Gambar Kursus -->
+                        <!-- tempat gambar kursus -->
                         <div class="bg-secondary text-white d-flex align-items-center justify-content-center" style="height: 150px;">
                             <span class="fw-semibold">Gambar <?php echo $kursus['bahasa']; ?></span>
                         </div>
@@ -131,7 +131,7 @@ $daftar_kursus = [
                             <p class="card-text text-muted small flex-grow-1"><?php echo $kursus['deskripsi']; ?></p>
                             <h6 class="fw-bold text-success mb-3"><?php echo $kursus['harga']; ?></h6>
                             
-                            <!-- Tombol mengarah ke Layout 3 -->
+                            <!-- tombol menuju halaman detail kursus -->
                             <a href="index.php?page=detail&id=<?php echo $kursus['id']; ?>" class="btn btn-outline-primary w-100">Lihat Detail</a>
                         </div>
                     </div>
@@ -139,7 +139,7 @@ $daftar_kursus = [
                 <?php endforeach; ?>
             </div>
             
-            <!-- Pesan jika pencarian tidak ditemukan -->
+            <!-- pemberitahuan jika kursus tidak ditemukan -->
             <div id="noResult" class="alert alert-warning text-center mt-4 d-none">
                 Kursus yang Anda cari tidak ditemukan. Silakan ubah kata kunci atau filter.
             </div>
@@ -147,16 +147,16 @@ $daftar_kursus = [
     </div>
 </div>
 
-<!-- JavaScript untuk fungsionalitas Search & Filter secara real-time -->
+<!-- kode javascript untuk fitur cari dan filter langsung -->
 <script>
 document.getElementById('searchInput').addEventListener('keyup', filterCourses);
 
 function filterCourses() {
     const searchText = document.getElementById('searchInput').value.toLowerCase();
     
-    // Ambil bahasa yang dicentang
+    // mengambil pilihan bahasa yang dicentang
     const checkedBahasa = Array.from(document.querySelectorAll('.filter-bahasa:checked')).map(cb => cb.value);
-    // Ambil level yang dicentang
+    // mengambil pilihan level yang dicentang
     const checkedLevel = Array.from(document.querySelectorAll('.filter-level:checked')).map(cb => cb.value);
     
     const courses = document.querySelectorAll('.course-item');
@@ -179,7 +179,7 @@ function filterCourses() {
         }
     });
 
-    // Tampilkan pesan jika tidak ada kursus yang cocok
+    // menampilkan pesan jika hasil pencarian kosong
     const noResultAlert = document.getElementById('noResult');
     if (visibleCount === 0) {
         noResultAlert.classList.remove('d-none');

@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html>
-<!-- Memanggil bagian Head -->
+<!-- memanggil bagian head -->
 <?php include("framework/head.php"); ?>
 
 <body>
-    <div class="container-fluid p-0">
-        <!-- Memanggil Navigation Bar -->
+    <div class="container-fluid p-0 d-flex flex-column min-vh-100">
+        <!-- memanggil navigation bar -->
         <?php include("framework/nav.php"); ?>
         
-        <!-- Bagian Konten yang Berubah-ubah -->
-        <section class="min-vh-100">
+        <!-- bagian konten yang berubah-ubah -->
+        <section class="flex-grow-1">
             <?php
-            // Logika PHP Switch Statement
-            $content = "home.php"; // Halaman default
+            // logika php switch statement
+            $content = "home.php"; // halaman default
             $mod = "";
             
             if(isset($_GET['page'])) {
@@ -25,15 +25,15 @@
                 case "dashboard": $content="dashboard.php"; break;
                 case "kelas": $content="kelas.php"; break;
                 case "kuis": $content="kuis.php"; break;
-                case "credit": $content="credit.php"; break; // Halaman Wajib Tugas
+                case "credit": $content="credit.php"; break; // halaman wajib tugas
                 default: $content="home.php";
             }
-            // Memanggil file halaman sesuai hasil switch
+            // memanggil file halaman sesuai hasil switch
             include($content);
             ?>
         </section>
 
-        <!-- Memanggil Footer -->
+        <!-- memanggil footer -->
         <?php include("framework/footer.php"); ?>
     </div>
 </body>
